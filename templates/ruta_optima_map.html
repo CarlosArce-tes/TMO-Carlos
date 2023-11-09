@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ad8d3a45c17be5e210fd45a8817e7a79 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ad8d3a45c17be5e210fd45a8817e7a79" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ad8d3a45c17be5e210fd45a8817e7a79 = L.map(
+                "map_ad8d3a45c17be5e210fd45a8817e7a79",
+                {
+                    center: [19.4144, -99.1768],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_66e26521ff0dbc5a4b6aa10b278447a7 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+                tile_layer_66e26521ff0dbc5a4b6aa10b278447a7.addTo(map_ad8d3a45c17be5e210fd45a8817e7a79);
+    
+            var marker_9916c0dec69cfaacd3e1874a806170b6 = L.marker(
+                [19.4144, -99.1768],
+                {}
+            ).addTo(map_ad8d3a45c17be5e210fd45a8817e7a79);
+        
+    
+        var popup_fa5517a16257094b38d3d33c98c4f9e0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0cf6c890876db34e51d95fbdbd2ce9b8 = $(`<div id="html_0cf6c890876db34e51d95fbdbd2ce9b8" style="width: 100.0%; height: 100.0%;">Condesa, Ciudad de México</div>`)[0];
+                popup_fa5517a16257094b38d3d33c98c4f9e0.setContent(html_0cf6c890876db34e51d95fbdbd2ce9b8);
+            
+        
+
+        marker_9916c0dec69cfaacd3e1874a806170b6.bindPopup(popup_fa5517a16257094b38d3d33c98c4f9e0)
+        ;
+
+        
+    
+    
+            var marker_1ed942cb8a3a90d6a2b0c53c1a9e18d6 = L.marker(
+                [19.427, -99.1676],
+                {}
+            ).addTo(map_ad8d3a45c17be5e210fd45a8817e7a79);
+        
+    
+        var popup_d15e7f85b4deb25c58c648203dd86817 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b247203129b3a9b2331ab5ed04f0c08 = $(`<div id="html_1b247203129b3a9b2331ab5ed04f0c08" style="width: 100.0%; height: 100.0%;">Ángel de la Independencia, Ciudad de México</div>`)[0];
+                popup_d15e7f85b4deb25c58c648203dd86817.setContent(html_1b247203129b3a9b2331ab5ed04f0c08);
+            
+        
+
+        marker_1ed942cb8a3a90d6a2b0c53c1a9e18d6.bindPopup(popup_d15e7f85b4deb25c58c648203dd86817)
+        ;
+
+        
+    
+    
+            var marker_13e577c8fd61382f8a1c75b34ccc9cc2 = L.marker(
+                [19.4276, -99.1675],
+                {}
+            ).addTo(map_ad8d3a45c17be5e210fd45a8817e7a79);
+        
+    
+        var popup_7b85d983492364caeedff8fef1498174 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ec811b17bf3f2744956c1e91769854cb = $(`<div id="html_ec811b17bf3f2744956c1e91769854cb" style="width: 100.0%; height: 100.0%;">Reforma 222, Ciudad de México</div>`)[0];
+                popup_7b85d983492364caeedff8fef1498174.setContent(html_ec811b17bf3f2744956c1e91769854cb);
+            
+        
+
+        marker_13e577c8fd61382f8a1c75b34ccc9cc2.bindPopup(popup_7b85d983492364caeedff8fef1498174)
+        ;
+
+        
+    
+    
+            var marker_6d28544f657a7a72b67ee5380e6b500e = L.marker(
+                [19.4257, -99.1655],
+                {}
+            ).addTo(map_ad8d3a45c17be5e210fd45a8817e7a79);
+        
+    
+        var popup_d7dea7ad028298ef035ef31bf138a268 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_49f4ffe1a037d6b81fa8c4723e92471e = $(`<div id="html_49f4ffe1a037d6b81fa8c4723e92471e" style="width: 100.0%; height: 100.0%;">Zona Rosa, Ciudad de México</div>`)[0];
+                popup_d7dea7ad028298ef035ef31bf138a268.setContent(html_49f4ffe1a037d6b81fa8c4723e92471e);
+            
+        
+
+        marker_6d28544f657a7a72b67ee5380e6b500e.bindPopup(popup_d7dea7ad028298ef035ef31bf138a268)
+        ;
+
+        
+    
+    
+            var marker_9d61ffb4c8f6ad5e1d0c3a1113b2955c = L.marker(
+                [19.415, -99.1574],
+                {}
+            ).addTo(map_ad8d3a45c17be5e210fd45a8817e7a79);
+        
+    
+        var popup_56f16c4786241194e34dab07bd526143 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c992fa623f709f989edb70ce1cb2d6c3 = $(`<div id="html_c992fa623f709f989edb70ce1cb2d6c3" style="width: 100.0%; height: 100.0%;">Roma, Ciudad de México</div>`)[0];
+                popup_56f16c4786241194e34dab07bd526143.setContent(html_c992fa623f709f989edb70ce1cb2d6c3);
+            
+        
+
+        marker_9d61ffb4c8f6ad5e1d0c3a1113b2955c.bindPopup(popup_56f16c4786241194e34dab07bd526143)
+        ;
+
+        
+    
+    
+            var poly_line_19fd799908ecae0ce6cbf8c8b97a7045 = L.polyline(
+                [[19.4144, -99.1768], [19.427, -99.1676], [19.4276, -99.1675], [19.4257, -99.1655], [19.415, -99.1574]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_ad8d3a45c17be5e210fd45a8817e7a79);
+        
+</script>
+</html>
