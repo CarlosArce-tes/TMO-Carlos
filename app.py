@@ -7,11 +7,11 @@ app = Flask(__name__)
 
 # Coordenadas de las ubicaciones
 locations = [
-    ("Reforma 222, Ciudad de México", 19.4276, -99.1675),
-    ("Ángel de la Independencia, Ciudad de México", 19.4270, -99.1676),
-    ("Zona Rosa, Ciudad de México", 19.4257, -99.1655),
-    ("Condesa, Ciudad de México", 19.4144, -99.1768),
-    ("Roma, Ciudad de México", 19.4150, -99.1574),
+    ("Ciudad de México", 19.4326, -99.1332),
+    ("Toluca", 19.2925, -99.6569),
+    ("Puebla", 19.0402, -98.2062),
+    ("Cuernavaca", 18.9242, -99.2216),
+    ("Querétaro", 20.5888, -100.3899),
 ]
 
 # Función para calcular la distancia total de una secuencia de entregas
@@ -51,12 +51,12 @@ folium.PolyLine(ruta_optima, color="blue", weight=2.5, opacity=1).add_to(m)
 m.save("./templates/ruta_optima_map.html")
 @app.route('/ruta_optima_map')
 def ruta_optima_map():
-    return render_template('ruta_optima_map.html')
+    return render_template('ruta_optima_map.html', mejor_secuencia=mejor_secuencia)
 
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', ruta_optima=mejor_secuencia, locations=locations)
 
 if __name__ == '__main__':
-    app.run(debug= True)
+    app.run(host= "0.0.0.0", port=5000, debug=True)
