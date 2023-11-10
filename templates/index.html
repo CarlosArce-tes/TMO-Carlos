@@ -7,7 +7,7 @@
 </head>
 <body class="bg-light">
     <div class="container">
-        <h1 class="text-center mt-5">Seguimiento de entrega</h1>
+        <h1 class="fs-1 fw-bold  text-center mt-5">Seguimiento de entrega</h1>
 
         <div class="callout ms-2 mt-5">
             <div class="row justify-content-center">
@@ -15,15 +15,17 @@
                     <iframe class="rounded shadow-lg p-3 mb-5 bg-body-tertiary rounded" src="{{ url_for('ruta_optima_map') }}" width="100%" height="500"></iframe>
                 </div>
                 <div class="ms-5 col-sm-8 col-xl-4 text-center">
+                    
                     <ul class="list-group">
                         {% if ruta_optima %}
-                            {% for ubicacion in ruta_optima %}
+                            {% for ubicacion in ruta_optima|reverse %}
                                 <li class="user-select-none fw-semibold alert alert-info bg-primary-subtle list-group-item">{{ locations[ubicacion][0] }}</li>
                             {% endfor %}
                         {% else %}
                             <li class="list-group-item">No hay ruta óptima disponible.</li>
                         {% endif %}
                     </ul>
+                    
                 </div>
             </div>
         </div>

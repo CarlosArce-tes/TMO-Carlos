@@ -2,8 +2,9 @@ import random
 from geopy.distance import great_circle
 from itertools import permutations
 import folium
-from flask import Flask, render_template
+from flask import Flask, redirect, render_template, request, url_for
 import mysql.connector
+
 
 app = Flask(__name__)
 
@@ -86,7 +87,7 @@ def ruta_optima_map():
     for i, ubicacion in enumerate(mejor_secuencia):
         folium.Marker(
             location=locations[ubicacion][1:],
-            popup=locations[ubicacion][0],
+            popup=locations[ubicacion][0]
         ).add_to(m)
 
     ruta_optima = [locations[i][1:] for i in mejor_secuencia]
@@ -103,7 +104,7 @@ def index():
     mejor_secuencia = calcular_mejor_secuencia(locations)
 
     return render_template('index.html', ruta_optima=mejor_secuencia, locations=locations)
-def generate_random_color():
-    return "#{:06x}".format(random.randint(0, 0xFFFFFF))
+
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)

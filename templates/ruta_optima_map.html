@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_a19a0319ea6750ce35765338f70da65d {
+                #map_8504a349a2a4c169b47c17ca8842d790 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,16 +39,16 @@
 <body>
     
     
-            <div class="folium-map" id="map_a19a0319ea6750ce35765338f70da65d" ></div>
+            <div class="folium-map" id="map_8504a349a2a4c169b47c17ca8842d790" ></div>
         
 </body>
 <script>
     
     
-            var map_a19a0319ea6750ce35765338f70da65d = L.map(
-                "map_a19a0319ea6750ce35765338f70da65d",
+            var map_8504a349a2a4c169b47c17ca8842d790 = L.map(
+                "map_8504a349a2a4c169b47c17ca8842d790",
                 {
-                    center: [20.591949, -100.385467],
+                    center: [19.659735, -99.210921],
                     crs: L.CRS.EPSG3857,
                     zoom: 8,
                     zoomControl: true,
@@ -60,261 +60,219 @@
 
         
     
-            var tile_layer_a23860a9b06686e3bd3265b17ddc5e85 = L.tileLayer(
+            var tile_layer_32e4f3dc5870290e5ce5b01a6ea2d51b = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-                tile_layer_a23860a9b06686e3bd3265b17ddc5e85.addTo(map_a19a0319ea6750ce35765338f70da65d);
+                tile_layer_32e4f3dc5870290e5ce5b01a6ea2d51b.addTo(map_8504a349a2a4c169b47c17ca8842d790);
     
-            var tile_layer_49d35053f2a4ff6ccf9584731fbafa49 = L.tileLayer(
+            var tile_layer_167b6436f940e30b48718bdd01225d1e = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "OpenStreetMap", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-                tile_layer_49d35053f2a4ff6ccf9584731fbafa49.addTo(map_a19a0319ea6750ce35765338f70da65d);
+                tile_layer_167b6436f940e30b48718bdd01225d1e.addTo(map_8504a349a2a4c169b47c17ca8842d790);
     
-            var tile_layer_df722a3938870a13c8cc5d382aa9c826 = L.tileLayer(
+            var tile_layer_322e42fe1398f5399bfd7f050b6de9df = L.tileLayer(
                 "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
                 {"attribution": "Esri World Imagery", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-                tile_layer_df722a3938870a13c8cc5d382aa9c826.addTo(map_a19a0319ea6750ce35765338f70da65d);
+                tile_layer_322e42fe1398f5399bfd7f050b6de9df.addTo(map_8504a349a2a4c169b47c17ca8842d790);
     
-            var layer_control_283ad91f5f19ebf233e85f8cfd13c6f1_layers = {
+            var layer_control_9deb89a5867d93403ff3b33c1add6d9d_layers = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_a23860a9b06686e3bd3265b17ddc5e85,
-                    "Mapa" : tile_layer_49d35053f2a4ff6ccf9584731fbafa49,
-                    "Sat\u00e9lite" : tile_layer_df722a3938870a13c8cc5d382aa9c826,
+                    "openstreetmap" : tile_layer_32e4f3dc5870290e5ce5b01a6ea2d51b,
+                    "Mapa" : tile_layer_167b6436f940e30b48718bdd01225d1e,
+                    "Sat\u00e9lite" : tile_layer_322e42fe1398f5399bfd7f050b6de9df,
                 },
                 overlays :  {
                 },
             };
-            let layer_control_283ad91f5f19ebf233e85f8cfd13c6f1 = L.control.layers(
-                layer_control_283ad91f5f19ebf233e85f8cfd13c6f1_layers.base_layers,
-                layer_control_283ad91f5f19ebf233e85f8cfd13c6f1_layers.overlays,
+            let layer_control_9deb89a5867d93403ff3b33c1add6d9d = L.control.layers(
+                layer_control_9deb89a5867d93403ff3b33c1add6d9d_layers.base_layers,
+                layer_control_9deb89a5867d93403ff3b33c1add6d9d_layers.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_a19a0319ea6750ce35765338f70da65d);
+            ).addTo(map_8504a349a2a4c169b47c17ca8842d790);
 
         
     
-            var marker_40a361f27b453123205474832d0abbab = L.marker(
-                [20.591949, -100.385467],
-                {}
-            ).addTo(map_a19a0319ea6750ce35765338f70da65d);
-        
-    
-        var popup_665f509a718fe0b7886ce5b3dcf7a870 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_d21ee3925ddebdcb80f0c82687114d40 = $(`<div id="html_d21ee3925ddebdcb80f0c82687114d40" style="width: 100.0%; height: 100.0%;">Santiago de Queretaro, Queretaro</div>`)[0];
-                popup_665f509a718fe0b7886ce5b3dcf7a870.setContent(html_d21ee3925ddebdcb80f0c82687114d40);
-            
-        
-
-        marker_40a361f27b453123205474832d0abbab.bindPopup(popup_665f509a718fe0b7886ce5b3dcf7a870)
-        ;
-
-        
-    
-    
-            var marker_ee7214f4a8e583a4980d32f2a2862232 = L.marker(
-                [20.397284, -99.98272],
-                {}
-            ).addTo(map_a19a0319ea6750ce35765338f70da65d);
-        
-    
-        var popup_cda5f04b878e6b5e063ae067bb9a0a3b = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_9646eacfdb207e4d88f4e8c5dc30ec91 = $(`<div id="html_9646eacfdb207e4d88f4e8c5dc30ec91" style="width: 100.0%; height: 100.0%;">San, Juan del Rio, Queretaro</div>`)[0];
-                popup_cda5f04b878e6b5e063ae067bb9a0a3b.setContent(html_9646eacfdb207e4d88f4e8c5dc30ec91);
-            
-        
-
-        marker_ee7214f4a8e583a4980d32f2a2862232.bindPopup(popup_cda5f04b878e6b5e063ae067bb9a0a3b)
-        ;
-
-        
-    
-    
-            var marker_54e87790202eda5283d49c51914bc6dc = L.marker(
-                [20.045647, -99.580436],
-                {}
-            ).addTo(map_a19a0319ea6750ce35765338f70da65d);
-        
-    
-        var popup_5bd48bd663d68b37bf40f66e2b83717f = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_1d5ae46b2e40aa32fd5b33b1d7a4abba = $(`<div id="html_1d5ae46b2e40aa32fd5b33b1d7a4abba" style="width: 100.0%; height: 100.0%;">Troquelados Modulares S.A de C.V, San Miguel de la Victoria</div>`)[0];
-                popup_5bd48bd663d68b37bf40f66e2b83717f.setContent(html_1d5ae46b2e40aa32fd5b33b1d7a4abba);
-            
-        
-
-        marker_54e87790202eda5283d49c51914bc6dc.bindPopup(popup_5bd48bd663d68b37bf40f66e2b83717f)
-        ;
-
-        
-    
-    
-            var marker_50fa659cec7aa1ea73d2e6e15c9bb90c = L.marker(
-                [19.972762, -99.52607],
-                {}
-            ).addTo(map_a19a0319ea6750ce35765338f70da65d);
-        
-    
-        var popup_6fe8cd230dc99eb0ece9732990b77d76 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_5f2bdbd4ffc8b80afef9bbf7807686c5 = $(`<div id="html_5f2bdbd4ffc8b80afef9bbf7807686c5" style="width: 100.0%; height: 100.0%;">Truper Planta, Jilotepec de Molina Enriquez, Carretera Jilotepec - San Agustin</div>`)[0];
-                popup_6fe8cd230dc99eb0ece9732990b77d76.setContent(html_5f2bdbd4ffc8b80afef9bbf7807686c5);
-            
-        
-
-        marker_50fa659cec7aa1ea73d2e6e15c9bb90c.bindPopup(popup_6fe8cd230dc99eb0ece9732990b77d76)
-        ;
-
-        
-    
-    
-            var marker_8b7e4dd5a313580817e65b7373c89a8f = L.marker(
-                [19.996887, -99.517169],
-                {}
-            ).addTo(map_a19a0319ea6750ce35765338f70da65d);
-        
-    
-        var popup_fc3a8e76d23222580ed7760e9d03e021 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_5717e5d53c0e6b314f5db80d59d6dec1 = $(`<div id="html_5717e5d53c0e6b314f5db80d59d6dec1" style="width: 100.0%; height: 100.0%;">Embotelladora Niagara de Mexico, Soyaniquilpan de Juarez</div>`)[0];
-                popup_fc3a8e76d23222580ed7760e9d03e021.setContent(html_5717e5d53c0e6b314f5db80d59d6dec1);
-            
-        
-
-        marker_8b7e4dd5a313580817e65b7373c89a8f.bindPopup(popup_fc3a8e76d23222580ed7760e9d03e021)
-        ;
-
-        
-    
-    
-            var marker_46d15fea605a6f7af21d3804172f12dc = L.marker(
-                [20.064901, -99.340475],
-                {}
-            ).addTo(map_a19a0319ea6750ce35765338f70da65d);
-        
-    
-        var popup_436f20cec9f3885e06181a1eafcd9d60 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_489afbede4f46fcc5fcbeaeaffd7a9be = $(`<div id="html_489afbede4f46fcc5fcbeaeaffd7a9be" style="width: 100.0%; height: 100.0%;">Atlantes de Tula, Tula de Allende, Hidalgo</div>`)[0];
-                popup_436f20cec9f3885e06181a1eafcd9d60.setContent(html_489afbede4f46fcc5fcbeaeaffd7a9be);
-            
-        
-
-        marker_46d15fea605a6f7af21d3804172f12dc.bindPopup(popup_436f20cec9f3885e06181a1eafcd9d60)
-        ;
-
-        
-    
-    
-            var marker_d0622632cc3c4b902a39a3408f614ef9 = L.marker(
-                [19.902769, -99.338049],
-                {}
-            ).addTo(map_a19a0319ea6750ce35765338f70da65d);
-        
-    
-        var popup_b8f0df246bac60f0320261f0089d91b5 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_b5e56752bd21ee9af98922d6d91ae658 = $(`<div id="html_b5e56752bd21ee9af98922d6d91ae658" style="width: 100.0%; height: 100.0%;">Cinepolis, Tepeji del Rio de Ocampo, Hidalgo</div>`)[0];
-                popup_b8f0df246bac60f0320261f0089d91b5.setContent(html_b5e56752bd21ee9af98922d6d91ae658);
-            
-        
-
-        marker_d0622632cc3c4b902a39a3408f614ef9.bindPopup(popup_b8f0df246bac60f0320261f0089d91b5)
-        ;
-
-        
-    
-    
-            var marker_5fbcfe58cff71a369264da4a76455260 = L.marker(
-                [19.838984, -99.210087],
-                {}
-            ).addTo(map_a19a0319ea6750ce35765338f70da65d);
-        
-    
-        var popup_3549cfe3bed5fa9c71ce205a4c3b8493 = L.popup({"maxWidth": "100%"});
-
-        
-            
-                var html_705dfbb0e5b5b37d424cfb15be5ed55a = $(`<div id="html_705dfbb0e5b5b37d424cfb15be5ed55a" style="width: 100.0%; height: 100.0%;">Bodega Aurrera, Huehuetoca, Edo. Mex</div>`)[0];
-                popup_3549cfe3bed5fa9c71ce205a4c3b8493.setContent(html_705dfbb0e5b5b37d424cfb15be5ed55a);
-            
-        
-
-        marker_5fbcfe58cff71a369264da4a76455260.bindPopup(popup_3549cfe3bed5fa9c71ce205a4c3b8493)
-        ;
-
-        
-    
-    
-            var marker_4d1b675ddeae0a0ac0bd92f1d3ce3495 = L.marker(
+            var marker_87112206249f18dd6cef9c0543765b02 = L.marker(
                 [19.659735, -99.210921],
                 {}
-            ).addTo(map_a19a0319ea6750ce35765338f70da65d);
+            ).addTo(map_8504a349a2a4c169b47c17ca8842d790);
         
     
-        var popup_92533ab2b55ba26c7cac4dfd502caae2 = L.popup({"maxWidth": "100%"});
+        var popup_e04b3108942771eeae76a69c79528ab0 = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_7034d2cd60f8d8d8fa77daf4bbf8cc7b = $(`<div id="html_7034d2cd60f8d8d8fa77daf4bbf8cc7b" style="width: 100.0%; height: 100.0%;">Luna Parc, Cuautitlan Izcalli, Edo. Mex</div>`)[0];
-                popup_92533ab2b55ba26c7cac4dfd502caae2.setContent(html_7034d2cd60f8d8d8fa77daf4bbf8cc7b);
+                var html_4b8015fc88735f6160e105dfa6889ba5 = $(`<div id="html_4b8015fc88735f6160e105dfa6889ba5" style="width: 100.0%; height: 100.0%;">Luna Parc, Cuautitlan Izcalli, Edo. Mex</div>`)[0];
+                popup_e04b3108942771eeae76a69c79528ab0.setContent(html_4b8015fc88735f6160e105dfa6889ba5);
             
         
 
-        marker_4d1b675ddeae0a0ac0bd92f1d3ce3495.bindPopup(popup_92533ab2b55ba26c7cac4dfd502caae2)
+        marker_87112206249f18dd6cef9c0543765b02.bindPopup(popup_e04b3108942771eeae76a69c79528ab0)
         ;
 
         
     
     
-            var marker_4076bbc57ad46f1a2f5260fa385285d9 = L.marker(
-                [19.425602, -99.090767],
+            var marker_3d1e77d262b1560b35cc337da2025b16 = L.marker(
+                [19.838984, -99.210087],
                 {}
-            ).addTo(map_a19a0319ea6750ce35765338f70da65d);
+            ).addTo(map_8504a349a2a4c169b47c17ca8842d790);
         
     
-        var popup_bec29fc1ab201368c03e180b53806c63 = L.popup({"maxWidth": "100%"});
+        var popup_ba3b563dc1a85607d556e7388b91e66c = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_3fca35ebe19457d64339a1f50b23c81d = $(`<div id="html_3fca35ebe19457d64339a1f50b23c81d" style="width: 100.0%; height: 100.0%;">AICM, CDMX, Mexico</div>`)[0];
-                popup_bec29fc1ab201368c03e180b53806c63.setContent(html_3fca35ebe19457d64339a1f50b23c81d);
+                var html_52b5871c8c765d89e915646e3101730a = $(`<div id="html_52b5871c8c765d89e915646e3101730a" style="width: 100.0%; height: 100.0%;">Bodega Aurrera, Huehuetoca, Edo. Mex</div>`)[0];
+                popup_ba3b563dc1a85607d556e7388b91e66c.setContent(html_52b5871c8c765d89e915646e3101730a);
             
         
 
-        marker_4076bbc57ad46f1a2f5260fa385285d9.bindPopup(popup_bec29fc1ab201368c03e180b53806c63)
+        marker_3d1e77d262b1560b35cc337da2025b16.bindPopup(popup_ba3b563dc1a85607d556e7388b91e66c)
         ;
 
         
     
     
-            var poly_line_6f354a9573632b89305394763a4be292 = L.polyline(
-                [[20.591949, -100.385467], [20.397284, -99.98272], [20.045647, -99.580436], [19.972762, -99.52607], [19.996887, -99.517169], [20.064901, -99.340475], [19.902769, -99.338049], [19.838984, -99.210087], [19.659735, -99.210921], [19.425602, -99.090767]],
+            var marker_f8c464232d5b65afa3bcea4c4599cef1 = L.marker(
+                [19.902769, -99.338049],
+                {}
+            ).addTo(map_8504a349a2a4c169b47c17ca8842d790);
+        
+    
+        var popup_0879544d50e834b3884fb4f317250630 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0011c249b2374933f4acb1f41621ea5a = $(`<div id="html_0011c249b2374933f4acb1f41621ea5a" style="width: 100.0%; height: 100.0%;">Cinepolis, Tepeji del Rio de Ocampo, Hidalgo</div>`)[0];
+                popup_0879544d50e834b3884fb4f317250630.setContent(html_0011c249b2374933f4acb1f41621ea5a);
+            
+        
+
+        marker_f8c464232d5b65afa3bcea4c4599cef1.bindPopup(popup_0879544d50e834b3884fb4f317250630)
+        ;
+
+        
+    
+    
+            var marker_256b2ab6adc2bf143db40eb6b16f32f0 = L.marker(
+                [20.064901, -99.340475],
+                {}
+            ).addTo(map_8504a349a2a4c169b47c17ca8842d790);
+        
+    
+        var popup_e895c7ac4322b99513ab722ad42fb270 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_47d99d120c0bae42db5bfaf0a625c957 = $(`<div id="html_47d99d120c0bae42db5bfaf0a625c957" style="width: 100.0%; height: 100.0%;">Atlantes de Tula, Tula de Allende, Hidalgo</div>`)[0];
+                popup_e895c7ac4322b99513ab722ad42fb270.setContent(html_47d99d120c0bae42db5bfaf0a625c957);
+            
+        
+
+        marker_256b2ab6adc2bf143db40eb6b16f32f0.bindPopup(popup_e895c7ac4322b99513ab722ad42fb270)
+        ;
+
+        
+    
+    
+            var marker_16e12a39615e2a783008386fd8533edb = L.marker(
+                [19.996887, -99.517169],
+                {}
+            ).addTo(map_8504a349a2a4c169b47c17ca8842d790);
+        
+    
+        var popup_9b860dca0c73184c08565a26c9e8f6d7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d082664b821db423cb963e1eaf0557c4 = $(`<div id="html_d082664b821db423cb963e1eaf0557c4" style="width: 100.0%; height: 100.0%;">Embotelladora Niagara de Mexico, Soyaniquilpan de Juarez</div>`)[0];
+                popup_9b860dca0c73184c08565a26c9e8f6d7.setContent(html_d082664b821db423cb963e1eaf0557c4);
+            
+        
+
+        marker_16e12a39615e2a783008386fd8533edb.bindPopup(popup_9b860dca0c73184c08565a26c9e8f6d7)
+        ;
+
+        
+    
+    
+            var marker_151db207518915ebc37021f879cda423 = L.marker(
+                [19.972762, -99.52607],
+                {}
+            ).addTo(map_8504a349a2a4c169b47c17ca8842d790);
+        
+    
+        var popup_bdb879ae1cb0392ad9eb01b660bd8fbe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f8c791f5471611701f808353dc2b041 = $(`<div id="html_9f8c791f5471611701f808353dc2b041" style="width: 100.0%; height: 100.0%;">Truper Planta, Jilotepec de Molina Enriquez, Carretera Jilotepec - San Agustin</div>`)[0];
+                popup_bdb879ae1cb0392ad9eb01b660bd8fbe.setContent(html_9f8c791f5471611701f808353dc2b041);
+            
+        
+
+        marker_151db207518915ebc37021f879cda423.bindPopup(popup_bdb879ae1cb0392ad9eb01b660bd8fbe)
+        ;
+
+        
+    
+    
+            var marker_e30f51059e65f7485055c4ca8d0a0d0a = L.marker(
+                [20.045647, -99.580436],
+                {}
+            ).addTo(map_8504a349a2a4c169b47c17ca8842d790);
+        
+    
+        var popup_10457625a9125ebbed9b4408af8d9f3b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e37d834a103b3d135e1faaa5c1d74eb0 = $(`<div id="html_e37d834a103b3d135e1faaa5c1d74eb0" style="width: 100.0%; height: 100.0%;">Troquelados Modulares S.A de C.V, San Miguel de la Victoria</div>`)[0];
+                popup_10457625a9125ebbed9b4408af8d9f3b.setContent(html_e37d834a103b3d135e1faaa5c1d74eb0);
+            
+        
+
+        marker_e30f51059e65f7485055c4ca8d0a0d0a.bindPopup(popup_10457625a9125ebbed9b4408af8d9f3b)
+        ;
+
+        
+    
+    
+            var marker_a64b4ad69d1a70bd6b5ffb2ae70ea906 = L.marker(
+                [20.397284, -99.98272],
+                {}
+            ).addTo(map_8504a349a2a4c169b47c17ca8842d790);
+        
+    
+        var popup_7de604f7b83262889789491eb1bd018a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c4864cecba1cf06e8232ad40711f5094 = $(`<div id="html_c4864cecba1cf06e8232ad40711f5094" style="width: 100.0%; height: 100.0%;">San, Juan del Rio, Queretaro</div>`)[0];
+                popup_7de604f7b83262889789491eb1bd018a.setContent(html_c4864cecba1cf06e8232ad40711f5094);
+            
+        
+
+        marker_a64b4ad69d1a70bd6b5ffb2ae70ea906.bindPopup(popup_7de604f7b83262889789491eb1bd018a)
+        ;
+
+        
+    
+    
+            var poly_line_ada04e9a2765a0e83805e68361385080 = L.polyline(
+                [[19.659735, -99.210921], [19.838984, -99.210087], [19.902769, -99.338049], [20.064901, -99.340475], [19.996887, -99.517169], [19.972762, -99.52607], [20.045647, -99.580436], [20.397284, -99.98272]],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
-            ).addTo(map_a19a0319ea6750ce35765338f70da65d);
+            ).addTo(map_8504a349a2a4c169b47c17ca8842d790);
         
 </script>
 </html>
