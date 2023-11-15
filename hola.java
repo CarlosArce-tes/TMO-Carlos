@@ -1,6 +1,8 @@
+import javax.swing.JOptionPane;
+
 class hola{
     public static void main(String[] args) {
-        System.out.println("saludo");
-        
+        int numero= Integer.parseInt(JOptionPane.showInputDialog("Digita un numero"));
+        System.out.println(numero);
     }
 }
