@@ -2,11 +2,13 @@ import random
 from geopy.distance import great_circle
 from itertools import permutations
 import folium
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, jsonify,render_template, redirect, url_for
 import mysql.connector
+from flask_cors import CORS
 
 app = Flask(__name__)
 
+CORS(app)
 def obtener_coordenadas():
     conn = mysql.connector.connect(
         host='127.0.0.1',
@@ -16,7 +18,7 @@ def obtener_coordenadas():
     )
     cursor = conn.cursor()
 
-    cursor.execute("SELECT IDCoordenada, NombreLugar, Latitud, Longitud FROM Coordenadas")
+    cursor.execute("SELECT IDCoordenada, NombreLugar, Latitud, Longitud, Status FROM Coordenadas WHERE Status=0 ")
     coordenadas_db = cursor.fetchall()
 
     # Correct the variable name to 'coordenada' in the list comprehension
@@ -26,6 +28,25 @@ def obtener_coordenadas():
     conn.close()
 
     return locations
+def obtenerEntregados():
+    conn = mysql.connector.connect(
+        host='127.0.0.1',
+        user='root',
+        password='carlos18',
+        database='seguiorden'
+    )
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT IDCoordenada, NombreLugar, Latitud, Longitud, Status FROM Coordenadas WHERE Status=1 ")
+    coordenadas_db = cursor.fetchall()
+
+    # Correct the variable name to 'coordenada' in the list comprehension
+    locations2 = [(coordenada[0], coordenada[1], float(coordenada[2]), float(coordenada[3])) for coordenada in coordenadas_db]
+
+    cursor.close()
+    conn.close()
+    return locations2
+
 
 def calcular_mejor_secuencia(locations):
     permutaciones_posibles = permutations(range(len(locations)))
@@ -66,6 +87,7 @@ def ruta_optima_map():
         name='Satélite',
     ).add_to(m)
 
+
     folium.LayerControl().add_to(m)
 
     for i, ubicacion in enumerate(mejor_secuencia):
@@ -78,16 +100,20 @@ def ruta_optima_map():
     folium.PolyLine(ruta_optima, color="blue", weight=2.5, opacity=1).add_to(m)
 
     m.save("./templates/ruta_optima_map.html")
+    
+
+
 
     return render_template('ruta_optima_map.html', mejor_secuencia=mejor_secuencia)
 
+    
 @app.route('/')
 def index():
     nombre = 'carlos'
     locations = obtener_coordenadas()
     mejor_secuencia = calcular_mejor_secuencia(locations)
-
-    return render_template('index.html', ruta_optima=mejor_secuencia, locations=locations, nombre=nombre)
+    locations2 = obtenerEntregados()
+    return render_template('index.html', ruta_optima=mejor_secuencia, locations=locations, nombre=nombre, locations2= locations2)
 
 @app.route('/eliminar_ubicacion/<int:id>')
 def eliminar_ubicacion(id):
@@ -101,7 +127,7 @@ def eliminar_ubicacion(id):
     )
     cursor = conn.cursor()
 
-    cursor.execute("DELETE FROM Coordenadas WHERE IDCoordenada = %s", (id,))
+    cursor.execute("UPDATE Coordenadas SET Status=1 WHERE IDCoordenada = %s", (id,))
 
     conn.commit()
 
