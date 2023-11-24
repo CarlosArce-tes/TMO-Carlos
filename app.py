@@ -113,7 +113,9 @@ def index():
     locations = obtener_coordenadas()
     mejor_secuencia = calcular_mejor_secuencia(locations)
     locations2 = obtenerEntregados()
-    return render_template('index.html', ruta_optima=mejor_secuencia, locations=locations, nombre=nombre, locations2= locations2)
+    totalEntrega = contadorEntregas()
+    noentregado = contadorNoEntregas()
+    return render_template('index.html', ruta_optima=mejor_secuencia, locations=locations, nombre=nombre, locations2= locations2, totalEntrega=totalEntrega, noentregado=noentregado)
 
 @app.route('/eliminar_ubicacion/<int:id>')
 def eliminar_ubicacion(id):
@@ -135,6 +137,47 @@ def eliminar_ubicacion(id):
     conn.close()
 
     return redirect(url_for('index'))
+def contadorEntregas():
+    conn = mysql.connector.connect(
+        host='127.0.0.1',
+        user='root',
+        password='carlos18',
+        database='seguiorden'
+    )
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT COUNT(*) AS entregas FROM Coordenadas WHERE Status = 1")
+
+    # Recuperar el resultado
+    resultado = cursor.fetchone()
+    total_entregas = resultado[0] if resultado else None
+
+    # Cerrar cursor y conexión
+    cursor.close()
+    conn.close()
+
+    return total_entregas
+
+def contadorNoEntregas():
+    conn = mysql.connector.connect(
+        host='127.0.0.1',
+        user='root',
+        password='carlos18',
+        database='seguiorden'
+    )
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT COUNT(*) AS entregas FROM Coordenadas WHERE Status = 0")
+
+    # Recuperar el resultado
+    resultado2 = cursor.fetchone()
+    totalnoentregas = resultado2[0] if resultado2 else None
+
+    # Cerrar cursor y conexión
+    cursor.close()
+    conn.close()
+
+    return totalnoentregas
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)

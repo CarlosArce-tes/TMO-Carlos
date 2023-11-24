@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Ruta Óptima</title>
+    <title>Rutas de entrega | Logistica - TMO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
@@ -12,7 +12,7 @@
     <div class="container">
         <h1 class="fs-1 fw-bold text-center mt-5">Seguimiento de entrega</h1>
         <div class="mt-5">
-            
+
         </div>
         <div class="callout ms-2 mt-5">
             <div class="row justify-content-center">
@@ -28,7 +28,7 @@
                 
                 <div class="ms-5 col-sm-8 col-xl-5 text-start">
                     <hr class="mt-3 mb-3">
-                    <h2 class="fw-bold ">Sin Entregar</h2>
+                    <h2 class="fw-bold ">Sin Entregar: {{noentregado}}</h2>
                     <h6>Presiona el boton rojo al concluir una entrega</h6>
                     <ul class="list-group mt-3">
                         {% if locations %}
@@ -50,7 +50,7 @@
                 </div>
                 <hr class="mt-3 mb-3">
                 <h2 class="fw-bold">Entregado</h2>
-                
+                <h3>Total de entregas: {{ totalEntrega }}</h3>
                 <div class="ms-5 col-sm-8 col-xl-4 text-center">
                     <ul class="list-group mb-5">
                         {% if locations2 %}
