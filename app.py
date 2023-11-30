@@ -93,7 +93,7 @@ def ruta_optima_map():
     for i, ubicacion in enumerate(mejor_secuencia):
         folium.Marker(
             location=locations[ubicacion][2:],
-            popup=f'{locations[ubicacion][0]} \n {locations[ubicacion][1]}'
+            popup=f'{locations[ubicacion][0]} \n {locations[ubicacion][1]} \n {locations[ubicacion][2]} \n {locations[ubicacion][3]}'
         ).add_to(m)
 
     ruta_optima = [locations[i][2:] for i in mejor_secuencia]
@@ -181,3 +181,5 @@ def contadorNoEntregas():
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
+
+#insert seguimieto orden
